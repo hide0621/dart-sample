@@ -3,36 +3,27 @@ void main() {
 
   int num = 0;
 
-  //足し算
-  num++;
+  // こんな書き方もできる
+
+  num += 10;
 
   print(num);
 
-  //引き算
-
-  num--;
+  num -= 5;
 
   print(num);
 
-  // 掛け算
+  num *= 2;
 
-  num = 10;
+  print(num);
 
-  print(num * 10);
+  // /演算子はdouble型の変数に使用するので、int型の変数には使用できない（あまりが0なら使えるが...）
+  // num /= 4; // int型に変換できないとのエラーが出る
 
-  // 割り算（小数点第一位まで出力される）
+  double num2 = 4.0;
 
-  print(num / 10);
+  num2 /= 4;
 
-  // ~/演算子で割り算（小数点以下切り捨て）
-
-  print(num ~/ 10);
-
-  // 余り
-
-  print(num % 3);
-
-
-
+  print(num2);
 
 }
