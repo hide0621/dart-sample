@@ -1,46 +1,41 @@
 
 void main() {
 
-  var nameList = ["taro", "Doe", "jiro", "Doe"];
+  var nameMap = {
+    'first': 'John',
+    'last': 'Doe'
+  };
 
-  for (var name in nameList) {
-    print(name);
+  print(nameMap);
+
+  print(nameMap['first']);
+
+  print("-------------------");
+
+  // Add a new key-value pair
+  nameMap['middle'] = 'William';
+
+  print(nameMap);
+
+  print("-------------------");
+
+  // Remove a key-value pair
+  nameMap.remove('middle');
+
+  print(nameMap);
+
+  print("-------------------");
+
+  // for文でkeyを取得
+  for (var key in nameMap.keys) {
+    print(key);
   }
 
-  print("-----");
+  print("-------------------");
 
-  // インデックスを指定して要素を追加
-  nameList.insert(1, "hanako");
-
-  for (var name in nameList) {
-    print(name);
-  }
-
-  print("-----");
-
-  // 要素を追加
-  nameList.add("saburo");
-
-  for (var name in nameList) {
-    print(name);
-  }
-
-  print("-----");
-
-  // インデックスを指定して要素を削除
-  nameList.removeAt(0);
-
-  for (var name in nameList) {
-    print(name);
-  }
-
-  print("-----");
-
-  // 要素を削除(ただしこの場合、同じ名前の要素が複数ある場合は一番若いインデックスの要素が削除される
-  nameList.remove("Doe");
-
-  for (var name in nameList) {
-    print(name);
+  // for文でvalueを取得
+  for (var value in nameMap.values) {
+    print(value);
   }
 
 }
