@@ -1,41 +1,71 @@
+import 'methods.dart'; // 相対パスでファイルのパスを指定する
 
 void main() {
 
-  var nameMap = {
-    'first': 'John',
-    'last': 'Doe'
-  };
+  printNumber1();
+  printNumber2(2);
 
-  print(nameMap);
+  var number = printNumber3(3);
+  print(number);
 
-  print(nameMap['first']);
+  print(add(4, 5));
 
-  print("-------------------");
+  var result = addAndSub(6, 7);
+  print(result[0]);
+  //両方出すならこう（ただしリストになる）
+  print(result);
 
-  // Add a new key-value pair
-  nameMap['middle'] = 'William';
+  var result2 = addAndSub2(8, 9);
+  print(result2['add']);
+  //両方出すならこう（ただしマップになる）
+  print(result2);
 
-  print(nameMap);
+  var result3 = addAndSub3(10, 11);
+  print(result3.add);
+  //両方出すならこう（ただし文字列になる）
+  print("${result3.add}, ${result3.sub}");
 
-  print("-------------------");
+  // メソッドの戻り値を引数を2つ以上持つメソッドに渡して使うなら(こうすれば型を守れる)...
+  var x = result3.add;
+  var y = result3.sub;
 
-  // Remove a key-value pair
-  nameMap.remove('middle');
+  print(hoge(x, y));
 
-  print(nameMap);
+  // 名前付き引数を使うなら（引数との対応関係を明示的に示す）
+  var z = printNumber4(x: 12, y: 13);
+  print(z);
 
-  print("-------------------");
+  var z2 = printNumber5(x: 14, y: 15);
+  print(z2);
 
-  // for文でkeyを取得
-  for (var key in nameMap.keys) {
-    print(key);
-  }
+  var z3 = printNumber6(x: 16, y: 17);
+  print(z3);
 
-  print("-------------------");
+  // 片方だけ渡すことも可能
+  var z4 = printNumber6(x: 18);
+  print(z4);
 
-  // for文でvalueを取得
-  for (var value in nameMap.values) {
-    print(value);
-  }
+  // オプション引数を使うなら
+  var z5 = printNumber7(19);
+  print(z5);
+
+  var z6 = printNumber8(20);
+  print(z6);
+
+  var z7 = printNumber9(21);
+  print(z7);
+
+  // メソッドfujiを試す
+  var z8 = fuji(x: 20);
+  print(z8);
+
+  // メソッドfujisanを試す
+  var z9 = fujisan(y: 21);
+  print(z9);
+
+  // アロー関数を試す
+  var result4 = add2(1, 3);
+  print(result4);
+  printNumber10();
 
 }
