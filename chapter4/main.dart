@@ -1,4 +1,5 @@
 import 'const_final.dart';
+import 'object.dart';
 import 'user.dart';
 
 void main() {
@@ -7,4 +8,8 @@ void main() {
   print('----------');
 
   practice2();
+
+  print('----------');
+
+  practice3();
 }
