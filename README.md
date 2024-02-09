@@ -46,3 +46,11 @@
   
   したがって、継承は「is-a」の関係（例：EmployeeはPersonである）を表現し、ミキシンは「has-a」の関係（例：CarはEngineを持っている）を表現するのに適している。
 
+# staticについて
+
+以下のサイトがわかりやい
+
+[初心者のためのJava基礎 Java static](https://zenn.dev/odentravel/books/c893bb0b7352f6/viewer/0494b3)
+
+ただし、dartではstaticな変数やメソッドは1クラスの中で何個でも定義できるので注意
+
