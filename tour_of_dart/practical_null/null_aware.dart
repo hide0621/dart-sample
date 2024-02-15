@@ -26,4 +26,12 @@ void main() {
 
   //nullableStringはnullなので、lengthプロパティは呼び出されず、nullが出力される
   print(nullableString?.length); // null
+
+  // 上のコードとは意味が違うが、こんなコードも表現できる
+  // 意味は、nullableStringがnullならばnullを返す、そうでないならnullableStringの値を返す
+  print(nullableString ?? null); // null
+
+  // 別表現だとこうともできる
+  // 意味は、nullableStringがnullならばnullを返す、そうでないならnullableStringの値を返す
+  print(nullableString == null ? null : nullableString); // null
 }
